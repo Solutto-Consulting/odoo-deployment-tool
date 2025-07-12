@@ -1,0 +1,71 @@
+# Docker Compose Template for Odoo Deployment
+#
+# Placeholders to replace:
+# {db_container_name}    - Database container name (e.g., testing1_soluttoconsulting_db)
+# {odoo_container_name}  - Odoo container name (e.g., testing1_soluttoconsulting_odoo)
+# {db_password}          - PostgreSQL database password
+# {odoo_port}            - Main Odoo application port (default: 8069)
+# {longpolling_port}     - Odoo longpolling port (default: 8072)
+# {odoo_version}         - Odoo version (e.g., 18.0)
+# {postgres_version}     - PostgreSQL version (e.g., 16)
+#
+# PostgreSQL user remains as 'odoo'
+# Volume mappings remain as-is (relative paths)
+# Network configuration remains as-is
+#
+# /home/solutto/apps/{hostname}/docker-compose.yml
+version: '3.8'
+
+services:
+  {db_container_name}:
+    image: postgres:{postgres_version}
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: odoo
+      POSTGRES_PASSWORD: {db_password}
+    volumes:
+      - ./db:/var/lib/postgresql/data
+      - ./backup:/mnt/backup
+    networks:
+      - solutto-internal
+
+  {odoo_container_name}:
+    image: odoo:{odoo_version}
+    restart: unless-stopped
+    depends_on:
+      - {db_container_name}
+
+    environment:
+      HOST:          {db_container_name}
+      USER:          odoo
+      PASSWORD:      {db_password}
+
+    volumes:
+      # Odoo filestore & attachments
+      - ./data:/var/lib/odoo
+
+      # host backup folder → container
+      - ./backup:/mnt/backup
+
+      # your odoo.conf
+      - ./config/odoo.conf:/etc/odoo/odoo.conf:ro
+
+      # shared enterprise, themes, GeoIP, extra-addons
+      - ../shared/enterprise:/mnt/enterprise-addons:ro
+      - ../shared/themes:/mnt/themes:ro
+      - ../shared/GeoIP:/usr/share/GeoIP:ro
+      - ./addons:/mnt/extra-addons
+
+    ports:
+      - "{odoo_port}:8069"
+      - "{longpolling_port}:8072"
+
+    ## Use this command to import a database on startup (only if the initial database is not already present)
+    # command: ["--db_host", "{db_container_name}", "--db_user", "odoo", "--db_password", "{db_password}", "-i", "base"]
+
+    networks:
+      - solutto-internal
+
+networks:
+  solutto-internal:
+    external: true
