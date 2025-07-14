@@ -11,6 +11,10 @@ config/odoo.conf
 setup.json
 db/
 data/
+# Ignore all .conf files except apache-vhost-template.conf
+*.conf
+*.*.conf
+!apache-vhost-template.conf
 
 # Common system files
 .DS_Store
