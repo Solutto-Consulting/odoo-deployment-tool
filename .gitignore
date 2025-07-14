@@ -7,7 +7,8 @@
 
 # Docker and Odoo configuration
 docker-compose.yml
-conf/odoo.confs
+config/odoo.conf
+setup.json
 db/
 data/
 
