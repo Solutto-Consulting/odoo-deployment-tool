@@ -117,13 +117,13 @@ print_status "Creating target directory: $TARGET_DIR"
 mkdir -p "$TARGET_DIR"/{addons,backup,config,data,db}
 
 # Set ownership for specific directories
-chown 100:101 "$TARGET_DIR/addons"
-chown 100:101 "$TARGET_DIR/data"
-chown root:root "$TARGET_DIR/db"
+chown 100:101 -R "$TARGET_DIR/addons"
+chown 100:101 -R "$TARGET_DIR/data"
+chown root:root -R "$TARGET_DIR/db"
 
 # Set permissions for specific directories
-chmod 775 "$TARGET_DIR/data"
-chmod 744 "$TARGET_DIR/addons"
+chmod 777 -R "$TARGET_DIR/data"
+chmod 744 -R "$TARGET_DIR/addons"
 
 # Function to replace placeholders in a file
 replace_placeholders() {
