@@ -119,7 +119,6 @@ mkdir -p "$TARGET_DIR"/{addons,backup,config,data,db}
 # Set ownership for specific directories
 chown 100:101 -R "$TARGET_DIR/addons"
 chown 100:101 -R "$TARGET_DIR/data"
-chown root:root -R "$TARGET_DIR/db"
 
 # Set permissions for specific directories
 chmod 777 -R "$TARGET_DIR/data"
@@ -164,13 +163,13 @@ else
 fi
 
 # Generate Apache vhost file (but don't move it)
-if [[ -f "apache-hvost-template.conf" ]]; then
+if [[ -f "apache-vhost-template.conf" ]]; then
     APACHE_OUTPUT="$TARGET_DIR/${HOSTNAME}.conf"
-    replace_placeholders "apache-hvost-template.conf" "$APACHE_OUTPUT"
+    replace_placeholders "apache-vhost-template.conf" "$APACHE_OUTPUT"
     print_warning "Apache vhost file generated at: $APACHE_OUTPUT"
     print_warning "You must manually move this file to your Apache sites-available directory and enable it."
 else
-    print_error "Template file not found: apache-hvost-template.conf"
+    print_error "Template file not found: apache-vhost-template.conf"
     exit 1
 fi
 

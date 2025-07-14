@@ -9,6 +9,7 @@
 docker-compose.yml
 config/odoo.conf
 setup.json
+addons/
 db/
 data/
 # Ignore all .conf files except apache-vhost-template.conf
