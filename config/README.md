@@ -1,5 +1,8 @@
 # Config Directory
 
+**Copyright (c) 2023-2025 Gilson Rincón &lt;gilson.rincon@gmail.com&gt; - Solutto Consulting LLC**  
+*Licensed under the Solutto Consulting LLC Custom License. See [../LICENSE](../LICENSE) for terms.*
+
 This directory contains configuration files for your Odoo deployment.
 
 ## 📁 Contents

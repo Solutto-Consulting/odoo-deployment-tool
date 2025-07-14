@@ -1,4 +1,7 @@
 {
+  "_copyright": "Copyright (c) 2023-2025 Gilson Rincón <gilson.rincon@gmail.com> - Solutto Consulting LLC",
+  "_license": "Licensed under the Solutto Consulting LLC Custom License. See LICENSE file for terms.",
+  "_website": "https://www.soluttoconsulting.com",
   "comment": "Configuration file for Odoo deployment automation - Set values for each placeholder",
   "placeholders": {
     "hostname": "",

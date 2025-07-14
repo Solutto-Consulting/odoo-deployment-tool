@@ -1,0 +1,103 @@
+SOLUTTO CONSULTING LLC CUSTOM LICENSE
+
+Copyright (c) 2023-2025 Gilson Rincón <gilson.rincon@gmail.com>
+Solutto Consulting LLC
+https://www.soluttoconsulting.com
+
+TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+
+1. DEFINITIONS
+
+"License" refers to the terms and conditions for use, reproduction, and distribution as defined by Sections 1 through 9 of this document.
+
+"Licensor" refers to Gilson Rincón and Solutto Consulting LLC, the copyright owner or entity authorized by the copyright owner that is granting the License.
+
+"Legal Entity" refers to the union of the acting entity and all other entities that control, are controlled by, or are under common control with that entity.
+
+"You" (or "Your") refers to an individual or Legal Entity exercising permissions granted by this License.
+
+"Source" form refers to the preferred form for making modifications, including but not limited to software source code, documentation source, and configuration files.
+
+"Object" form refers to any form resulting from mechanical transformation or translation of a Source form, including but not limited to compiled object code, generated documentation, and conversions to other media types.
+
+"Work" refers to the work of authorship, whether in Source or Object form, made available under this License, as indicated by a copyright notice that is included in or attached to the work.
+
+"Derivative Works" refers to any work, whether in Source or Object form, that is based upon (or derived from) the Work and for which the editorial revisions, annotations, elaborations, or other modifications represent, as a whole, an original work of authorship.
+
+"Commercial Use" refers to any use of the Work or Derivative Works for commercial purposes, including but not limited to selling, licensing for profit, or incorporating into commercial products or services.
+
+2. GRANT OF COPYRIGHT LICENSE
+
+Subject to the terms and conditions of this License, Licensor hereby grants to You a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable copyright license to use, reproduce, prepare Derivative Works of, publicly display, publicly perform, sublicense, and distribute the Work and such Derivative Works in Source or Object form.
+
+3. GRANT OF PATENT LICENSE
+
+Subject to the terms and conditions of this License, Licensor hereby grants to You a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable (except as stated in this section) patent license to make, have made, use, offer to sell, sell, import, and otherwise transfer the Work.
+
+4. REDISTRIBUTION
+
+You may reproduce and distribute copies of the Work or Derivative Works thereof in any medium, with or without modifications, and in Source or Object form, provided that You meet the following conditions:
+
+a) You must give any other recipients of the Work or Derivative Works a copy of this License;
+
+b) You must cause any modified files to carry prominent notices stating that You changed the files;
+
+c) You must retain, in the Source form of any Derivative Works that You distribute, all copyright, patent, trademark, and attribution notices from the Source form of the Work, excluding those notices that do not pertain to any part of the Derivative Works;
+
+d) If the Work includes a "NOTICE" text file as part of its distribution, then any Derivative Works that You distribute must include a readable copy of the attribution notices contained within such NOTICE file.
+
+5. COMMERCIAL USE ATTRIBUTION REQUIREMENT
+
+For any Commercial Use of the Work or Derivative Works, You must:
+
+a) Provide clear and prominent attribution to Gilson Rincón and Solutto Consulting LLC in any documentation, user interfaces, or promotional materials;
+
+b) Include the following attribution notice: "This software contains components developed by Gilson Rincón (gilson.rincon@gmail.com) for Solutto Consulting LLC (https://www.soluttoconsulting.com)";
+
+c) Notify Solutto Consulting LLC of your Commercial Use by sending an email to gilson.rincon@gmail.com with details of the commercial application.
+
+6. SUBMISSION OF CONTRIBUTIONS
+
+Unless You explicitly state otherwise, any Contribution intentionally submitted for inclusion in the Work by You to the Licensor shall be under the terms and conditions of this License, without any additional terms or conditions.
+
+7. TRADEMARKS
+
+This License does not grant permission to use the trade names, trademarks, service marks, or product names of the Licensor, except as required for reasonable and customary use in describing the origin of the Work.
+
+8. DISCLAIMER OF WARRANTY
+
+THE WORK IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. THE LICENSOR MAKES NO REPRESENTATIONS OR WARRANTIES ABOUT THE SUITABILITY OF THE SOFTWARE, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.
+
+9. LIMITATION OF LIABILITY
+
+IN NO EVENT SHALL THE LICENSOR BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE WORK OR THE USE OR OTHER DEALINGS IN THE WORK. THIS INCLUDES, BUT IS NOT LIMITED TO, ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+10. USER RESPONSIBILITY
+
+YOU ACKNOWLEDGE AND AGREE THAT:
+
+a) You are solely responsible for testing, validating, and reviewing the Work before implementing it in any environment;
+
+b) You must thoroughly test the Work in non-production environments before any production use;
+
+c) You are responsible for identifying and fixing any bugs, security vulnerabilities, or issues that may affect the systems where the Work is deployed;
+
+d) You assume all risks associated with the use of the Work, including but not limited to system failures, data loss, security breaches, or any other adverse effects;
+
+e) The Licensor provides no support, maintenance, or updates for the Work unless separately agreed upon in writing.
+
+11. ACCEPTANCE AND TERMINATION
+
+By using, modifying, or distributing the Work, You indicate Your acceptance of this License and all its terms and conditions. This License and the rights granted hereunder will terminate automatically if You fail to comply with terms herein.
+
+12. GOVERNING LAW
+
+This License shall be governed by and construed in accordance with the laws of the jurisdiction where Solutto Consulting LLC is registered, without regard to conflict of law principles.
+
+END OF TERMS AND CONDITIONS
+
+For questions about this license, please contact:
+Gilson Rincón
+Email: gilson.rincon@gmail.com
+Company: Solutto Consulting LLC
+Website: https://www.soluttoconsulting.com

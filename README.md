@@ -1,6 +1,23 @@
 # Odoo Deployment Tool
 
+**Copyright (c) 2023-2025 Gilson Rincón &lt;gilson.rincon@gmail.com&gt;**  
+**Solutto Consulting LLC - https://www.soluttoconsulting.com**
+
+*Licensed under the Solutto Consulting LLC Custom License. See [LICENSE](LICENSE) file for complete terms and conditions.*
+
+---
+
 A comprehensive automation tool for deploying Odoo ERP instances with Docker, Apache configuration, and SSL support. This tool streamlines the process of setting up production-ready Odoo environments from templates.
+
+## 📋 License and Usage
+
+This software is developed by **Gilson Rincón** for **Solutto Consulting LLC**. You may use, modify, and distribute this software under the terms specified in the [LICENSE](LICENSE) file. 
+
+**Important Notes:**
+- ⚠️ **No Warranty**: This software is provided "AS IS" without warranty of any kind
+- 🔍 **User Responsibility**: You are responsible for testing and validating the code before use
+- 💼 **Commercial Use**: Proper attribution is required for commercial use (see LICENSE file)
+- 📖 **Please read the [LICENSE](LICENSE) file** for complete terms and conditions
 
 ## 🚀 Overview
 

@@ -1,9 +1,30 @@
+
+# Copyright (c) 2023-2025 Gilson Rincón <gilson.rincon@gmail.com>
+# Solutto Consulting LLC - https://www.soluttoconsulting.com
+#
+# This script is developed by Gilson Rincón for Solutto Consulting LLC.
+# 
+# Licensed under the Solutto Consulting LLC Custom License.
+# You may use, modify, and distribute this software under the terms specified in the LICENSE file.
+# For commercial use, proper attribution is required. See LICENSE file for full terms.
+# 
+# DISCLAIMER: This software is provided "AS IS" without warranty. Users are responsible
+# for testing and validating the code before use in any environment.
+#
+# Please read the LICENSE file in this repository for complete terms and conditions.
+#
 #!/bin/bash
 
 # Odoo Deployment Setup Script
 # This script generates deployment files from templates using setup.json configuration
 
 set -e  # Exit on any error
+
+# Ensure the script is run with sudo privileges
+if [[ "$EUID" -ne 0 ]]; then
+    echo -e "\033[0;31m[ERROR]\033[0m This script must be run as root or with sudo privileges."
+    exit 1
+fi
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 CONFIG_FILE="$SCRIPT_DIR/setup.json"
@@ -94,6 +115,15 @@ print_status "Configuration loaded for: $HOSTNAME"
 TARGET_DIR="../$HOSTNAME"
 print_status "Creating target directory: $TARGET_DIR"
 mkdir -p "$TARGET_DIR"/{addons,backup,config,data,db}
+
+# Set ownership for specific directories
+chown 100:101 "$TARGET_DIR/addons"
+chown 100:101 "$TARGET_DIR/data"
+chown root:root "$TARGET_DIR/db"
+
+# Set permissions for specific directories
+chmod 775 "$TARGET_DIR/data"
+chmod 744 "$TARGET_DIR/addons"
 
 # Function to replace placeholders in a file
 replace_placeholders() {
