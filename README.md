@@ -19,6 +19,37 @@ This software is developed by **Gilson Rincón** for **Solutto Consulting LLC**.
 - 💼 **Commercial Use**: Proper attribution is required for commercial use (see LICENSE file)
 - 📖 **Please read the [LICENSE](LICENSE) file** for complete terms and conditions
 
+## 🚀 Quick Start
+
+**Before you begin, ensure you meet these requirements:**
+
+### ✅ Pre-flight Checklist
+
+1. **📋 Create Configuration File**:
+   ```bash
+   cp setup-template.json setup.json
+   # Edit setup.json with your values
+   ```
+
+2. **🔐 Ensure Root Access**: Script must be run with sudo privileges
+   ```bash
+   sudo ./setup.sh
+   ```
+
+3. **🚀 Set Execute Permissions**:
+   ```bash
+   chmod +x setup.sh
+   ```
+
+4. **📦 Install Dependencies**:
+   ```bash
+   sudo apt-get install jq docker.io docker-compose
+   ```
+
+**👉 Ready to deploy? Jump to [Setup Process](#️-setup-process)**
+
+---
+
 ## 🚀 Overview
 
 This deployment tool automates the creation of Odoo instances by processing configuration templates and generating all necessary files for a complete deployment. It handles Docker Compose configurations, Apache virtual hosts, and Odoo application settings through a simple JSON configuration file.
@@ -113,10 +144,40 @@ This template configures the Odoo application itself:
   - Fedora: `sudo dnf install jq`
   - macOS: `brew install jq`
 - **Apache Web Server**: For reverse proxy (if using Apache configuration)
+- **Root/Sudo Access**: Required for running the setup script
+
+### ⚠️ Important Requirements Before Starting
+
+**🔑 CRITICAL: These steps are mandatory for successful deployment:**
+
+1. **📁 Create Configuration File**: 
+   ```bash
+   # Copy the template and create your configuration file
+   cp setup-template.json setup.json
+   ```
+
+2. **✏️ Edit Configuration**: Open `setup.json` and fill in all required values (see Step 1 below)
+
+3. **🔐 Root Privileges Required**: The setup script **MUST** be run with sudo privileges:
+   ```bash
+   # The script requires root access for directory permissions and ownership
+   sudo ./setup.sh
+   ```
+
+4. **🚀 Set Execute Permissions**: Ensure the script has execution permissions:
+   ```bash
+   chmod +x setup.sh
+   ```
 
 ### Step 1: Configure Deployment
 
-Edit the `setup.json` file with your deployment parameters:
+**First, copy the template and create your configuration file:**
+
+```bash
+cp setup-template.json setup.json
+```
+
+**Then edit the `setup.json` file with your deployment parameters:**
 
 ```json
 {
@@ -148,16 +209,24 @@ Edit the `setup.json` file with your deployment parameters:
 
 ### Step 2: Run Deployment Script
 
-Execute the setup script:
+**⚠️ IMPORTANT: Run with sudo privileges and ensure execute permissions are set:**
 
 ```bash
+# Set execute permissions (if not already set)
 chmod +x setup.sh
-./setup.sh
+
+# Run the script with sudo privileges (REQUIRED)
+sudo ./setup.sh
 ```
+
+**Why sudo is required:**
+- Creates directories with specific ownership (user 100:101 for Odoo containers)
+- Sets proper file permissions for Docker volume mounting
+- Ensures secure file handling for production deployment
 
 The script will:
 1. Validate your configuration
-2. Create the target directory structure
+2. Create the target directory structure with proper permissions
 3. Generate all configuration files from templates
 4. Provide next steps for manual configuration
 
@@ -635,7 +704,59 @@ Each directory includes its own README.md file explaining its purpose and conten
 
 ## 🛠️ Troubleshooting
 
-### Common Issues
+### Setup Script Issues
+
+**❌ "Permission denied" or "Operation not permitted" errors:**
+```bash
+# SOLUTION: Run the script with sudo privileges
+sudo ./setup.sh
+
+# The script requires root access to:
+# - Create directories with specific ownership (100:101)
+# - Set proper permissions for Docker volumes
+# - Ensure secure file handling
+```
+
+**❌ "setup.json not found" error:**
+```bash
+# SOLUTION: Create setup.json from template first
+cp setup-template.json setup.json
+
+# Then edit setup.json with your configuration values
+nano setup.json  # or use your preferred editor
+```
+
+**❌ "bash: ./setup.sh: Permission denied":**
+```bash
+# SOLUTION: Set execute permissions on the script
+chmod +x setup.sh
+
+# Then run with sudo
+sudo ./setup.sh
+```
+
+**❌ "jq: command not found":**
+```bash
+# SOLUTION: Install jq JSON processor
+# Ubuntu/Debian:
+sudo apt-get install jq
+
+# RHEL/CentOS:
+sudo yum install jq
+
+# Fedora:
+sudo dnf install jq
+```
+
+**❌ Script runs but creates wrong permissions:**
+```bash
+# ISSUE: Script was run without sudo
+# SOLUTION: Remove the created directory and run with sudo
+rm -rf ../your-hostname.com
+sudo ./setup.sh
+```
+
+### Common Runtime Issues
 
 **Port conflicts**:
 ```bash
