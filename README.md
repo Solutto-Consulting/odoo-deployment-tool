@@ -234,16 +234,16 @@ The script will:
 
 After running the script, complete these manual steps:
 
-1. **Move Apache Virtual Host**:
+1. **Generate SSL Certificates**:
+   ```bash
+   sudo certbot certonly --apache -d mycompany.example.com
+   ```
+
+2. **Move Apache Virtual Host**:
    ```bash
    sudo cp ../mycompany.example.com/mycompany.example.com.conf /etc/apache2/sites-available/
    sudo a2ensite mycompany.example.com
    sudo systemctl reload apache2
-   ```
-
-2. **Generate SSL Certificates**:
-   ```bash
-   sudo certbot --apache -d mycompany.example.com
    ```
 
 3. **Start Services**:

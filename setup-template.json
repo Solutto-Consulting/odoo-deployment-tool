@@ -33,7 +33,7 @@
   "generated_paths": {
     "docker_compose": "./docker-compose.yml",
     "apache_config": "./apache_configs/{hostname}.conf",
-    "odoo_config": "../{hostname}/config/odoo.conf",
+    "odoo_config": "../config/odoo.conf",
     "project_directory": "./"
   },
   "required_directories": [
